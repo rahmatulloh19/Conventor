@@ -1,0 +1,97 @@
+@use "../veriables";
+@use "../mixins" as m;
+
+/* Intro section styles started */
+
+.intro {
+  padding-top: 40px;
+}
+
+.intro__inner {
+  padding: 20px;
+  border: 2px solid #3f4892;
+  border-radius: 18px;
+  text-align: center;
+}
+
+.intro__heading {
+  @include m.default-text(16px, 24px, 700, normal);
+  color: #19193d;
+}
+
+.intro__form {
+  padding: 20px 12px;
+  background-color: #eff1f5;
+  border-radius: 6px;
+}
+
+.intro__form-inner {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.intro__input {
+  @include m.unstyler-tags;
+  background-color: #fff;
+  flex-grow: 2;
+  padding: 8px 8px 8px 12px;
+  font-size: 18px;
+  border: 1px solid #d6d9e0;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  outline: none;
+}
+
+.intro__select {
+  @include m.unstyler-tags;
+  flex-grow: 1;
+  background-color: #fff;
+  border: 1px solid #d6d9e0;
+  border-left: 0;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  outline: none;
+  appearance: none;
+  text-align: center;
+}
+
+.intro__btn {
+  display: block;
+  @include m.unstyler-tags;
+  margin: 0 auto 20px;
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #d6d9e0;
+  background-color: #fff;
+}
+
+.intro__result {
+  @include m.default-text(0, 17px, 500, 22px);
+}
+
+@include m.responsive(425px) {
+  .intro__form {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    column-gap: 12px;
+  }
+  
+  .intro__form-inner {
+    flex-grow: 1;
+    margin-bottom: 0;
+  }
+  
+  .intro__btn {
+    margin: 0;
+    flex-grow: 1;
+  }
+  
+  .intro__result-wrapper {
+    max-width: 369px;
+    min-width: 161px;
+  }
+}
+
+/* Intro section styles finished */

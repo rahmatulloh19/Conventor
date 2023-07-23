@@ -1,0 +1,26 @@
+@mixin layout($jc:space-between, $ai:center) {
+  display: flex;
+  justify-content: $jc;
+  align-items: $ai;
+}
+
+@mixin unstyler-tags {
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+}
+
+@mixin default-text($mb, $fz, $fw, $lh) {
+  margin-top: 0;
+  margin-bottom: $mb;
+  font-size: $fz;
+  font-weight: $fw;
+  line-height: $lh;
+} 
+
+@mixin responsive($miw) {
+  @media only screen and (min-width: $miw) {
+    @content;
+  }
+}

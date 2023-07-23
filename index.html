@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/main.css">
+  <title>Exchanging Currency</title>
+</head>
+<body>
+  <header class="site-header visually-hidden"></header>
+  <main class="site-main">
+    <section class="site-main__intro intro">
+      <div class="container">
+          <div class="intro__inner">
+            <h2 class="intro__heading">Kurs konventoriga hush kelibsiz</h2>
+            <form class="intro__form js-intro__form">
+              <div class="intro__form-inner">
+                <input class="intro__input js-intro__input" type="number" min="0" max="1000000" placeholder="Mablag'ni kiriting" aria-label="Mablag'ni kiriting" required>
+                <select class="intro__select js-intro__select">
+                  <option class="intro__option" value="USD">USD</option>
+                  <option class="intro__option" value="RUB">RUB</option>
+                  <option class="intro__option" value="EUR">EUR</option>
+                  <option class="intro__option" value="GBP">GBP</option>
+                  <option class="intro__option" value="KZT">KZT</option>
+                </select>
+              </div>
+              <button class="intro__btn" type="submit">Ayirboshlash</button>
+              <div class="intro__result-wrapper">
+                <output class="intro__result js-intro__result"></output>
+              </div>
+            </form>
+          </div>
+        </div>
+    </section>
+  </main>
+
+  <script src="./js/main.js"></script>
+</body>
+</html>
